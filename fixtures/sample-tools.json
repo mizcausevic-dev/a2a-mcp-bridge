@@ -1,0 +1,7 @@
+{
+  "tools": [
+    { "name": "lookup_invoice", "description": "Read an invoice by id." },
+    { "name": "list_invoices", "description": "List invoices for a customer." },
+    { "name": "issue_refund", "description": "Issue a refund against a charge. Destructive — requires human approval." }
+  ]
+}

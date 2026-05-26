@@ -1,0 +1,30 @@
+{
+  "name": "acme-billing",
+  "description": "A2A agent for ACME billing operations.",
+  "version": "1.2.0",
+  "supportedInterfaces": [],
+  "capabilities": { "streaming": true, "pushNotifications": false, "extendedAgentCard": false },
+  "defaultInputModes": ["application/json", "text/plain"],
+  "defaultOutputModes": ["application/json"],
+  "skills": [
+    {
+      "id": "lookup_invoice",
+      "name": "Lookup invoice",
+      "description": "Read an invoice by id.",
+      "tags": ["billing"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "issue_refund",
+      "name": "Issue refund",
+      "description": "Issue a refund against a charge. Destructive — requires human approval.",
+      "tags": ["billing", "destructive"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    }
+  ],
+  "provider": { "organization": "ACME", "url": "https://acme.example" },
+  "documentationUrl": "https://github.com/acme/mcp-billing",
+  "securitySchemes": { "bearer": { "type": "http", "scheme": "bearer" } }
+}
